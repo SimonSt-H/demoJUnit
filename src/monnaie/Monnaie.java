@@ -18,8 +18,8 @@ public class Monnaie {
         }
         montant = pMontant;
     }
-    public Monnaie plus(Monnaie pMontant2){
-        return new Monnaie(montant + pMontant2.montant);
+    public Monnaie plus(Monnaie pMonnaie2){
+        return new Monnaie(montant + pMonnaie2.montant);
     }
     
     public Monnaie pourcentage(double pPourcentage){
@@ -27,10 +27,10 @@ public class Monnaie {
     }
     
     public String toString(Monnaie pMonnaie){
-        return (Long.toString(montant));
+        return (Long.toString(montant/100) + "$");
     }
     
-    public Monnaie moins(Monnaie pMontant2){
-        return new Monnaie(montant - pMontant2.montant);
+    public Monnaie moins(Monnaie pMonnaie2){
+        return new Monnaie(montant - pMonnaie2.montant);
     }
 }
