@@ -26,7 +26,8 @@ public class Monnaie {
         return new Monnaie(Math.round(montant*pPourcentage));
     }
     
-    public String toString(Monnaie pMonnaie){
+    @Override
+    public String toString(){
         return (Long.toString(montant/100) + "$");
     }
     
